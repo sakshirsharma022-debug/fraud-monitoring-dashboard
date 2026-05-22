@@ -49,7 +49,7 @@ m2.metric("Model Threshold", "0.20", delta="Optimized")
 st.divider()
 
 
-if st.button("Fetch New Transactions from Feed"):
+if st.button("Fetch New Transactions from Feed", key="fetch_transactions_button"):
     with st.spinner('Analyzing patterns...'):
         time.sleep(1) 
         
@@ -150,7 +150,7 @@ m2.metric("Model Threshold", "0.20", delta="Optimized")
 st.divider()
 
 
-if st.button("Fetch New Transactions from Feed"):
+if st.button("Fetch New Transactions from Feed", key="fetch_transactions_button"):
     with st.spinner('Analyzing patterns...'):
         time.sleep(1) 
         
