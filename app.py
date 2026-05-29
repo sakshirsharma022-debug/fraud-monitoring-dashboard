@@ -17,7 +17,6 @@ def load_assets():
     with open("feature_columns.pkl", "rb") as f:
         feature_cols = pickle.load(f)
     
-    # ADD THESE TWO LINES
     fraud_samples = pd.read_csv("fraud_samples.csv")
     legit_samples = pd.read_csv("legit_samples.csv")
     
@@ -27,7 +26,7 @@ model, scaler, feature_cols, fraud_samples, legit_samples = load_assets()
 
 
 def generate_live_data(n=15):
-    n_fraud = np.random.randint(1, 3)      # always 1 or 2 fraud
+    n_fraud = np.random.randint(1, 3)     
     n_legit = n - n_fraud
 
     batch_fraud = fraud_samples.sample(n_fraud)
